@@ -23,6 +23,7 @@ export function request(config) {
     //请求失败信息
     //console.log(error)
   })
+
   //响应结果
   axiosInstance.interceptors.response.use((result) => {
 

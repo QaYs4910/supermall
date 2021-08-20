@@ -48,18 +48,20 @@
       }
     },
     mounted: function () {
-      // 1.操作DOM, 在前后添加Slide
-      setTimeout(() => {
-        this.handleDom();
 
-        // 2.开启定时器
-        this.startTimer();
-      }, 100)
     },
     methods: {
 		  /**
        * 定时器操作
        */
+		  init(){
+        this.$nextTick(()=>{ //等待DOM生成后进行获取DOM对象进行操作
+          this.handleDom();
+
+          // 2.开启定时器
+          this.startTimer();
+        })
+      },
       startTimer: function () {
 		    this.playTimer = window.setInterval(() => {
 		      this.currentIndex++;
