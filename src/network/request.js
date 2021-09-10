@@ -7,7 +7,7 @@ export function request(config) {
   //创建axios定义基本属性
   const axiosInstance = axios.create({
     //定义基本属性
-    baseURL: 'http://123.207.32.32:8000',
+    baseURL: 'http://152.136.185.210:7878/api/m5',
     timeout: 5000
   });
 

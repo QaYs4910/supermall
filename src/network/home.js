@@ -2,9 +2,21 @@
 import {request} from "@/network/request";
 
 //导出方法所返回到对象
-export function getHomeMultiedata(){
+export function getHomeMultiedata() {
 
   return request({
-    url:'/home/multidata'
+    url: '/home/multidata'
+  })
+}
+
+//获取首页goods商品的网络请求
+export function getHomeGoods(type, page) {
+
+  return request({
+    url: "/home/data",
+    params: {
+      type,
+      page
+    }
   })
 }
